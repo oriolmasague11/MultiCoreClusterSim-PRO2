@@ -1,4 +1,4 @@
-# MultiCoreClusterSim  
+# Multiprocessor Cluster Simulation  
 *A multiprocessor cluster simulation for the PRO2 course (UPC)*
 
 ## 📌 Overview
@@ -30,6 +30,31 @@ This project is based on the specification from the PRO2 course (UPC, 2023).
 
 ---
 
+## 📘 Command Summary
+
+| Command | Abbrev. | Description |
+|--------|---------|-------------|
+| `configurar_cluster` | `cc` | Initialize or replace the cluster. |
+| `modificar_cluster` | `mc` | Replace a processor with a new cluster. |
+| `alta_prioridad` | `ap` | Add a new priority to the waiting area. |
+| `baja_prioridad` | `bp` | Remove a priority (only if empty). |
+| `alta_proceso_espera` | `ape` | Add a process to the waiting area. |
+| `alta_proceso_procesador` | `app` | Add a process directly to a processor. |
+| `baja_proceso_procesador` | `bpp` | Remove a process from a processor. |
+| `enviar_procesos_cluster` | `epc` | Attempt to insert *n* waiting processes. |
+| `avanzar_tiempo` | `at` | Advance time and remove finished processes. |
+| `imprimir_prioridad` | `ipri` | Print processes of a priority + statistics. |
+| `imprimir_area_espera` | `iae` | Print all priorities and their pending processes. |
+| `imprimir_procesador` | `ipro` | Print details of a processor. |
+| `imprimir_procesadores_cluster` | `ipc` | Print all processors sorted by ID. |
+| `imprimir_estructura_cluster` | `iec` | Print binary-tree structure of the cluster. |
+| `compactar_memoria_procesador` | `cmp` | Compact memory of a processor. |
+| `compactar_memoria_cluster` | `cmc` | Compact memory in all processors. |
+| `fin` | — | End program execution. |
+
+---
+
+
 ## 🛠️ Compilation
 
 The project uses `g++` with the following compilation flags:
@@ -58,16 +83,6 @@ This produces an executable:
 Run the executable and provide commands through standard input:
 
 ```./program.exe < input.txt```
-
-The command interpreter supports:
-
-- Cluster configuration (```configurar_cluster```, ```cc```)
-- Priority and process management (```ap```, ```bp```, ```ape```)
-- Sending processes to the cluster (```epc```)
-- Time advancement (```at```)
-- Memory compaction (```cmp```, ```cmc```)
-- Printing detailed system state (```ipri```, ```iae```, ```ipro```, ```ipc```, ```iec```)
-- And more (full list available in the assignment)
 
 ---
 
