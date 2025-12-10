@@ -1,7 +1,7 @@
 # Multiprocessor Cluster Simulation  
 *A multiprocessor cluster simulation for the PRO2 course (UPC)*
 
-## 📌 Overview
+## Overview
 MultiCoreClusterSim is a C++ simulator of a multiprocessor architecture where processors are arranged as a binary-tree cluster.  
 Each processor owns a private memory space and can run multiple processes concurrently.  
 A global waiting area stores pending processes, ordered by configurable priority categories.
@@ -18,7 +18,7 @@ This project is based on the specification from the PRO2 course (UPC, 2023).
 
 ---
 
-## 🧩 Features
+## Features
 - **Binary-tree processor cluster** with unique processor identifiers  
 - **Waiting area with priorities**, sorted lexicographically  
 - **Process model** including ID, memory required, and execution time  
@@ -30,7 +30,7 @@ This project is based on the specification from the PRO2 course (UPC, 2023).
 
 ---
 
-## 📘 Command Summary
+## Command Summary
 
 | Command | Abbrev. | Description |
 |--------|---------|-------------|
@@ -55,7 +55,7 @@ This project is based on the specification from the PRO2 course (UPC, 2023).
 ---
 
 
-## 🛠️ Compilation
+## Compilation
 
 The project uses `g++` with the following compilation flags:
 
@@ -79,20 +79,20 @@ This produces an executable:
 
 ---
 
-## ▶️ Usage
+## Usage
 Run the executable and provide commands through standard input:
 
 ```./program.exe < input.txt```
 
 ---
 
-## 📚 Requirements
+## Requirements
 - **C++11 compiler**
 - Linux/Unix environment recommended (for Makefile & tar support)
 
 ---
 
-## 👤 Author
+## Author
 
 Project developed by Oriol Masagué as part of the PRO2 (Programming 2) course at UPC.
 Implementation, debugging, and design follow the course specifications.
