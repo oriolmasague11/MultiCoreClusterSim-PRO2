@@ -1,0 +1,163 @@
+pr100 110 
+pr20 10 
+pr25 510 
+*
+*
+pr5 10
+*
+* 
+pr50 10
+* 
+pr8 820
+*
+*
+4
+11
+22
+333
+1111
+mc pr50
+pr9
+100
+pr10
+100
+*
+*
+pr8
+100
+*
+*
+mc pr8
+pr9
+100
+pr10
+100
+*
+*
+pr8
+100
+*
+*
+iec
+ape 11 999 5 1
+ape 11 998 5 1
+ape 1111 997 1000000 1
+app pr100 101 5 5 
+app pr100 102 5 5 
+bpp pr100 101
+app pr20 101 10 10
+app pr25 101 5 5  
+app pr25 102 5 5  
+bpp pr25 101 
+app pr5 101 10 10 
+app pr50 101 10 10  
+app pr8 101 10 10 
+app pr8 102 10 10  
+bpp pr8 101
+iae
+epc 7
+iae
+ipc
+epc 2
+ipc
+iae
+cmc
+app pr25 996 10 1
+bpp pr25 102
+bpp pr25 104
+bpp pr25 999
+at 15
+ipc
+
+//Entrada comentada
+
+//Leemos un arbol de procesadores
+pr100 110 
+pr20 10 
+pr25 510 
+*
+*
+pr5 10
+*
+* 
+pr50 10
+* 
+pr8 820
+*
+*
+//Leemos un area de espera
+4
+11
+22
+333
+1111
+//Intenta colocar un nuevo cluster en un nodo que no es hoja
+mc pr50
+pr9
+100
+pr10
+100
+*
+*
+pr8
+100
+*
+*
+//Colocamos el nuevo cluster en un nodo que es hoja
+mc pr8
+pr9
+100
+pr10
+100
+*
+*
+pr8
+100
+*
+*
+//Imprimimos el area de espera para ver si lo ha añadido bien
+iec
+//Añadimos procesos al area de espera
+ape 11 999 5 1
+ape 11 998 5 1
+ape 1111 997 1000000 1
+//Configuramos el cluster para que los procesadores tengan unas caracteristicas determinadas
+app pr100 101 5 5 
+app pr100 102 5 5 
+bpp pr100 101
+app pr20 101 10 10
+app pr25 101 5 5  
+app pr25 102 5 5  
+bpp pr25 101 
+app pr5 101 10 10 
+app pr50 101 10 10  
+app pr8 101 10 10 
+app pr8 102 10 10  
+bpp pr8 101
+//Imprimimos el area de espera para ver si se han añadido correctamente
+iae
+//Enviamos mas de 3 procesos al cluster
+epc 7
+//Vemos si han sido aceptados (debe aver dos aceptados y uno de rechazado)
+iae
+//Vemos como han quedado los procesadores del cluster
+ipc
+//Enviamos mas de un proceso al cluster
+epc 2
+//Vemos que los procesos del cluster no han canviado
+ipc
+//Vemos si ha augmentado el numero de rechazos de la prioridad 1111
+iae
+//Provamos el compactar memoria cluster
+cmc
+//Configuramos el cluster para que los procesadores tengan unas caracteristicas determinadas
+app pr25 996 10 1
+bpp pr25 102
+bpp pr25 104
+bpp pr25 999
+//Avanzamos el tiempo de manera que finalicen todos los procesos
+at 15
+//Comprovamos que se han terminado todos los procesos
+ipc
+
+

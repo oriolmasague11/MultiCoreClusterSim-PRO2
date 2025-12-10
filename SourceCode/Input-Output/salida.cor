@@ -1,0 +1,104 @@
+#mc pr50
+error: procesador con auxiliares
+#mc pr8
+#iec
+(pr100(pr20(pr25  )(pr5  ))(pr50 (pr9(pr10  )(pr8  ))))
+#ape 11 999
+#ape 11 998
+#ape 1111 997
+#app pr100 101
+#app pr100 102
+#bpp pr100 101
+#app pr20 101
+#app pr25 101
+#app pr25 102
+#bpp pr25 101
+#app pr5 101
+#app pr50 101
+#app pr8 101
+#app pr8 102
+#bpp pr8 101
+#iae
+11
+999 5 1
+998 5 1
+0 0
+1111
+997 1000000 1
+0 0
+22
+0 0
+333
+0 0
+#epc 7
+#iae
+11
+2 0
+1111
+997 1000000 1
+0 1
+22
+0 0
+333
+0 0
+#ipc
+pr10
+pr100
+0 998 5 1
+5 102 5 5
+pr20
+0 101 10 10
+pr25
+0 999 5 1
+5 102 5 5
+pr5
+0 101 10 10
+pr50
+0 101 10 10
+pr8
+10 102 10 10
+pr9
+#epc 2
+#ipc
+pr10
+pr100
+0 998 5 1
+5 102 5 5
+pr20
+0 101 10 10
+pr25
+0 999 5 1
+5 102 5 5
+pr5
+0 101 10 10
+pr50
+0 101 10 10
+pr8
+10 102 10 10
+pr9
+#iae
+11
+2 0
+1111
+997 1000000 1
+0 2
+22
+0 0
+333
+0 0
+#cmc
+#app pr25 996
+#bpp pr25 102
+#bpp pr25 104
+error: no existe proceso
+#bpp pr25 999
+#at 15
+#ipc
+pr10
+pr100
+pr20
+pr25
+pr5
+pr50
+pr8
+pr9
